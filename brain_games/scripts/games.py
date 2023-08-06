@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
-import random, prompt
-from typing import Any
+import random
 
 
 def brain_even():
@@ -71,6 +70,7 @@ def brain_progression():
             question += f'{str(element)} '
     print(f'Question: {question}')
     return str(right_answer)
+
 
 def brain_prime():
     argument_first = random.randint(2, 1223)

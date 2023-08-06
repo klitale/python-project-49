@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-import random, prompt
+import prompt
 from brain_games.scripts import games
 
 
@@ -20,7 +20,9 @@ def start(game, greeting):
             print('Correct!')
             i += 1
         else:
-            print(f"'{user_answer}' is wrong answer ;(. Correct answer was '{right_answer}'.\nLet's try again, {name}!")
+            print(f"'{user_answer}' is wrong answer ;(. Correct answer was"
+                  f" '{right_answer}'."
+                  f"\nLet's try again, {name}!")
             break
     if i == 3:
         print(f'Congratulations, {name}!')

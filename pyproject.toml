@@ -1,9 +1,11 @@
 [tool.poetry]
 name = "hexlet-code"
 version = "0.1.0"
-description = ""
+description = "math game to testing user's logic"
 authors = ["Daniil Volkov"]
 readme = "README.md"
+repository = "https://github.com/klitale/python-project-49"
+classifiers = ["Hexlet Inership"]
 packages = [
 	{include = "brain_games"},
 ]
