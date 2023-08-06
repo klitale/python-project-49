@@ -24,3 +24,9 @@ make lint:
 
 brain-even:
 	poetry run brain-even
+
+brain-calc:
+	poetry run brain-calc
+
+add-to-path_imort_modul:
+export PYTHONPATH="/home/elias_aioli/python-project-49:$PYTHONPATH"

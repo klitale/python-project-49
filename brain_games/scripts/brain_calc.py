@@ -3,8 +3,8 @@ from engine import engine
 
 
 def main():
-    game = 'brain_even'
-    greeting = 'Answer "yes" if the number is even, otherwise answer "no".'
+    game = 'brain_calc'
+    greeting = 'What is the result of the expression?'
     engine.start(game, greeting)
 
 
