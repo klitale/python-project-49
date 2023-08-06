@@ -16,8 +16,11 @@ package-install:
 package-reinstall:
 	python3 -m pip install --user dist/*.whl --force-reinstall
 
-add-brain-games-to-path:
-	export PATH=/Users/<user_name>/Library/Python/3.11/bin:$PATH
+add-to-path:
+	export PATH=/Users/elias_aioli/Library/Python/3.11/bin:$PATH
 
 make lint:
 	poetry run flake8 brain_games
+
+brain-even:
+	poetry run brain-even
