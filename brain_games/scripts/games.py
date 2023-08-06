@@ -60,7 +60,7 @@ def brain_progression():
         next_argument = next_argument + step
         progression.append(next_argument)
         length -= 1
-    random_element = random.randint(0, len(progression))
+    random_element = random.randint(0, len(progression) - 1)
     random_element = progression[random_element]
     right_answer = random_element
     question = ''
@@ -70,4 +70,16 @@ def brain_progression():
         else:
             question += f'{str(element)} '
     print(f'Question: {question}')
+    return str(right_answer)
+
+def brain_prime():
+    argument_first = random.randint(2, 1223)
+    i = 1
+    right_answer = 'yes'
+    while argument_first >= i:
+        if argument_first % i == 0 and argument_first != i and i != 1:
+            right_answer = 'no'
+            break
+        i += 1
+    print(f'Question: {argument_first }')
     return str(right_answer)
