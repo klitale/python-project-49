@@ -13,7 +13,6 @@ def start(game, greeting):
     print(greeting)
     i = 0
     right_answer = ''
-    script = ''
     while i < 3:
         right_answer = eval(f'games.{game}()')
         user_answer = prompt.string('Your answer: ')

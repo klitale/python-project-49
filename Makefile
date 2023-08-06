@@ -31,5 +31,8 @@ brain-calc:
 brain-gcd:
 	poetry run brain-gcd
 
+brain-progression:
+	poetry run brain-progression
+
 add-to-path_imort_modul:
 export PYTHONPATH="/home/elias_aioli/python-project-49:$PYTHONPATH"
