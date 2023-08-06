@@ -28,5 +28,8 @@ brain-even:
 brain-calc:
 	poetry run brain-calc
 
+brain-gcd:
+	poetry run brain-gcd
+
 add-to-path_imort_modul:
 export PYTHONPATH="/home/elias_aioli/python-project-49:$PYTHONPATH"
