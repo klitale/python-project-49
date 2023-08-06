@@ -1,3 +1,7 @@
+#### Проект содержит в себе несколько арифметических игр. Скрипты к играм лежат в папке brain_games/scripts
+#### Логика скриптов описана в виде функций в файле brain_games/scripts/games.py
+#### Движок, запускающий скрипты, лежит в файле engine/engine.py
+
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/klitale/python-project-49/workflows/hexlet-check/badge.svg)](https://github.com/klitale/python-project-49/actions)
 
