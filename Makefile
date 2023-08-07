@@ -16,9 +16,6 @@ package-install:
 package-reinstall:
 	python3 -m pip install --user dist/*.whl --force-reinstall
 
-add-to-path:
-	export PATH=/Users/elias_aioli/Library/Python/3.11/bin:$PATH
-
 make lint:
 	poetry run flake8 brain_games
 
@@ -36,6 +33,3 @@ brain-progression:
 
 brain-prime:
 	poetry run brain-prime
-
-add-to-path_imort_modul:
-	export PYTHONPATH="/home/elias_aioli/python-project-49:$PYTHONPATH"
