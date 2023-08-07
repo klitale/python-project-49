@@ -52,7 +52,7 @@ def brain_gcd():
 def brain_progression():
     argument_first = random.randint(1, 99)
     step = random.randint(1, 11)
-    length = random.randint(4, 10)
+    length = random.randint(5, 10)
     next_argument = argument_first
     progression = []
     while 0 < length:
