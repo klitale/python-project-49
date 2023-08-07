@@ -38,4 +38,4 @@ brain-prime:
 	poetry run brain-prime
 
 add-to-path_imort_modul:
-export PYTHONPATH="/home/elias_aioli/python-project-49:$PYTHONPATH"
+	export PYTHONPATH="/home/elias_aioli/python-project-49:$PYTHONPATH"
