@@ -1,11 +1,6 @@
 #!/usr/bin/env python3
 import prompt
-from brain_games.scripts import games
-
-
-# заглушка, так как hexlet-test ругается на flake8,
-# несмотря на игнорирование в setup.cfg
-q = games.brain_end()
+from brain_games.scripts import games  # noqa:F401
 
 
 def start(game, greeting):

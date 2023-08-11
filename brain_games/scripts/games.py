@@ -83,8 +83,3 @@ def brain_prime():
         i += 1
     print(f'Question: {argument_first }')
     return str(right_answer)
-
-
-def brain_end():
-    q = 1
-    return q
