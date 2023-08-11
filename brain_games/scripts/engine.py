@@ -1,7 +1,10 @@
 import prompt
 
-from brain_games.games_logic import (brain_gcd_logic, brain_progression_logic, brain_prime_logic, brain_even_logic,
-                                     brain_calc_logic) # noqa: 401
+from brain_games.games_logic import (brain_gcd_logic,  # noqa: F401
+                                     brain_progression_logic,  # noqa: F401
+                                     brain_prime_logic,  # noqa: F401
+                                     brain_even_logic,  # noqa: F401
+                                     brain_calc_logic)  # noqa: F401
 
 
 def start(game, greeting):
