@@ -1,6 +1,7 @@
-#!/usr/bin/env python3
 import prompt
-from brain_games.scripts import games  # noqa:F401
+
+from brain_games.games_logic import (brain_gcd_logic, brain_progression_logic, brain_prime_logic, brain_even_logic,
+                                     brain_calc_logic) # noqa: 401
 
 
 def start(game, greeting):
@@ -11,17 +12,15 @@ def start(game, greeting):
         name = input()
     print(f'Hello, {name}!')
     print(greeting)
-    i = 0
-    while i < 3:
-        right_answer = eval(f'games.{game}()')
+    for question in range(3):
+        right_answer = eval(f'{game}.main()')
         user_answer = prompt.string('Your answer: ')
         if str(user_answer) == str(right_answer):
             print('Correct!')
-            i += 1
+            if question == 2:
+                print(f'Congratulations, {name}!')
         else:
             print(f"'{user_answer}' is wrong answer ;(. Correct answer was"
                   f" '{right_answer}'."
                   f"\nLet's try again, {name}!")
             break
-    if i == 3:
-        print(f'Congratulations, {name}!')

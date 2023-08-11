@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-from engine import engine
+from brain_games.scripts import engine
 
 
 def main():
-    game = 'brain_progression'
+    game = 'brain_progression_logic'
     greeting = 'What number is missing in the progression?'
     engine.start(game, greeting)
 

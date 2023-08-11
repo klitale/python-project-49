@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-from engine import engine
+from brain_games.scripts import engine
 
 
 def main():
-    game = 'brain_even'
+    game = 'brain_even_logic'
     greeting = 'Answer "yes" if the number is even, otherwise answer "no".'
     engine.start(game, greeting)
 
