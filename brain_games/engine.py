@@ -3,7 +3,6 @@ import prompt
 attempts = 3
 
 
-
 def start_game(script):
     print('Welcome to the Brain Games!')
     name = ''

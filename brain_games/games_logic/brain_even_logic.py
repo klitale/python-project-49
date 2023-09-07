@@ -6,7 +6,6 @@ def greeting():
 
 
 def play():
-    result = []
     argument_first = random.randint(1, 1000)
     right_answer = ''
     if argument_first % 2 == 0:
@@ -15,4 +14,3 @@ def play():
         right_answer = 'no'
     question = argument_first
     return right_answer, question
-
