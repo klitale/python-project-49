@@ -1,7 +1,11 @@
 import random
 
 
-def main():
+def greeting():
+    return 'What number is missing in the progression?'
+
+
+def play():
     argument_first = random.randint(1, 99)
     step = random.randint(1, 11)
     length = random.randint(6, 11)
@@ -20,5 +24,4 @@ def main():
             question += '.. '
         else:
             question += f'{str(element)} '
-    print(f'Question: {question}')
-    return str(right_answer)
+    return right_answer, question

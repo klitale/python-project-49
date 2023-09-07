@@ -1,26 +1,29 @@
 import prompt
-
-from brain_games.games_logic import (brain_gcd_logic,  # noqa: F401
-                                     brain_progression_logic,  # noqa: F401
-                                     brain_prime_logic,  # noqa: F401
-                                     brain_even_logic,  # noqa: F401
-                                     brain_calc_logic)  # noqa: F401
+# количество удачных попыток игры, по заданию - 3 штуки:
+attempts = 3
 
 
-def start(game, greeting):
+
+def start_game(script):
     print('Welcome to the Brain Games!')
     name = ''
+    global attempts
     while name == '':
         print('May I have your name? ', end='')
         name = input()
     print(f'Hello, {name}!')
-    print(greeting)
-    for question in range(3):
-        right_answer = eval(f'{game}.main()')
+    # вытаскиваем приветстсиве из скрипта:
+    print(script.greeting())
+    for attempt in range(attempts):
+        # вытаскиваем правильный ответ и вопрос из скрипта:
+        right_answer, question = script.play()
+        print(f'Question: {question}')
         user_answer = prompt.string('Your answer: ')
         if str(user_answer) == str(right_answer):
             print('Correct!')
-            if question == 2:
+            right_answer = ''
+            question = ''
+            if attempt == 2:
                 print(f'Congratulations, {name}!')
         else:
             print(f"'{user_answer}' is wrong answer ;(. Correct answer was"

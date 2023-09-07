@@ -1,7 +1,11 @@
 import random
 
 
-def main():
+def greeting():
+    return 'What is the result of the expression?'
+
+
+def play():
     argument_first = random.randint(1, 10)
     argument_second = random.randint(1, 10)
     operation = random.choice(['-', '+', '*'])
@@ -12,5 +16,5 @@ def main():
         right_answer = argument_first + argument_second
     else:
         right_answer = argument_first * argument_second
-    print(f'Question: {argument_first} {operation} {argument_second}')
-    return str(right_answer)
+    question = f'{argument_first} {operation} {argument_second}'
+    return right_answer, question

@@ -1,11 +1,10 @@
 #!/usr/bin/env python3
-from brain_games.scripts import engine
+from brain_games.engine import start_game
+from brain_games.games_logic import brain_calc_logic
 
 
 def main():
-    game = 'brain_calc_logic'
-    greeting = 'What is the result of the expression?'
-    engine.start(game, greeting)
+    start_game(brain_calc_logic)
 
 
 if __name__ == '__main__':

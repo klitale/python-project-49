@@ -1,7 +1,11 @@
 import random
 
 
-def main():
+def greeting():
+    return 'Answer "yes" if given number is prime. Otherwise answer "no".'
+
+
+def play():
     argument_first = random.randint(2, 1223)
     i = 1
     right_answer = 'yes'
@@ -10,5 +14,5 @@ def main():
             right_answer = 'no'
             break
         i += 1
-    print(f'Question: {argument_first }')
-    return str(right_answer)
+    question = argument_first
+    return right_answer, question

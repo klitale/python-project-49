@@ -1,7 +1,11 @@
 import random
 
 
-def main():
+def greeting():
+    return 'Find the greatest common divisor of given numbers.'
+
+
+def play():
     minimum = 0
     maximum = 0
     rem_of_div = 0
@@ -17,5 +21,5 @@ def main():
             maximum = minimum
             minimum = rem_of_div
     right_answer = minimum
-    print(f'Question: {argument_first} {argument_second}')
-    return str(right_answer)
+    question = f'{argument_first} {argument_second}'
+    return right_answer, question
