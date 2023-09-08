@@ -1,21 +1,21 @@
 import prompt
-# количество удачных попыток игры, по заданию - 3 штуки:
-attempts = 3
+# количество удачных попыток игры, по заданию - 3 штуки
 
+ATTEMPTS = 3
 
 def start_game(script):
     print('Welcome to the Brain Games!')
     name = ''
-    global attempts
     while name == '':
         print('May I have your name? ', end='')
         name = input()
     print(f'Hello, {name}!')
     # вытаскиваем приветстсиве из скрипта:
     print(script.greeting())
-    for attempt in range(attempts):
+    for attempt in range(ATTEMPTS):
         # вытаскиваем правильный ответ и вопрос из скрипта:
         right_answer, question = script.play()
+        # вытаскиваем вопрос из скрипта:
         print(f'Question: {question}')
         user_answer = prompt.string('Your answer: ')
         if str(user_answer) == str(right_answer):
