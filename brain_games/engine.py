@@ -3,18 +3,17 @@ import prompt
 
 ATTEMPTS = 3
 
-def start_game(script):
+
+def start(game):
     print('Welcome to the Brain Games!')
-    name = ''
-    while name == '':
-        print('May I have your name? ', end='')
-        name = input()
+    print('May I have your name? ', end='')
+    name = input()
     print(f'Hello, {name}!')
     # вытаскиваем приветстсиве из скрипта:
-    print(script.greeting())
+    print(game.DESCRIPTION)
     for attempt in range(ATTEMPTS):
         # вытаскиваем правильный ответ и вопрос из скрипта:
-        right_answer, question = script.play()
+        right_answer, question = game.get_question()
         # вытаскиваем вопрос из скрипта:
         print(f'Question: {question}')
         user_answer = prompt.string('Your answer: ')

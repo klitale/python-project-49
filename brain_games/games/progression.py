@@ -1,15 +1,14 @@
 import random
 
 
-def greeting():
-    return 'What number is missing in the progression?'
+DESCRIPTION = 'What number is missing in the progression?'
 
 
-def play():
-    argument_first = random.randint(1, 99)
+def get_question():
+    ran_first = random.randint(1, 99)
     step = random.randint(1, 11)
     length = random.randint(6, 11)
-    next_argument = argument_first
+    next_argument = ran_first
     progression = []
     while 0 < length:
         next_argument = next_argument + step
