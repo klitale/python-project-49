@@ -4,17 +4,19 @@ import prompt
 ATTEMPTS = 3
 
 
-def start(game):
-    print('Welcome to the Brain Games!')
-    print('May I have your name? ', end='')
+def greeting():
+    print('Welcome to the Brain Games!\n'
+          'May I have your name? ', end='')
     name = input()
     print(f'Hello, {name}!')
-    # вытаскиваем приветстсиве из скрипта:
+    return name
+
+
+def start(game):
+    name = greeting()
     print(game.DESCRIPTION)
     for attempt in range(ATTEMPTS):
-        # вытаскиваем правильный ответ и вопрос из скрипта:
         right_answer, question = game.get_question()
-        # вытаскиваем вопрос из скрипта:
         print(f'Question: {question}')
         user_answer = prompt.string('Your answer: ')
         if str(user_answer) == str(right_answer):
