@@ -5,22 +5,19 @@ DESCRIPTION = 'What number is missing in the progression?'
 
 
 def get_question():
-    ran_first = random.randint(1, 99)
+    start = random.randint(1, 99)
     step = random.randint(1, 11)
     length = random.randint(6, 11)
-    next_argument = ran_first
-    progression = []
-    while 0 < length:
-        next_argument = next_argument + step
-        progression.append(next_argument)
-        length -= 1
-    random_element = random.randint(0, len(progression) - 1)
-    random_element = progression[random_element]
-    right_answer = random_element
-    question = ''
-    for element in progression:
-        if int(random_element) == int(element):
-            question += '.. '
-        else:
-            question += f'{str(element)} '
+    hidden_position = random.randint(0, length - 1)
+    progression = get_progression(start, step, length)
+    right_answer = progression[hidden_position]
+    progression[hidden_position] = '.. '
+    question = " ".join(progression)
     return right_answer, question
+
+
+def get_progression(start, step, length):
+    progression = []
+    for i in range(length):
+        progression.append(str(start + step * i))
+    return progression

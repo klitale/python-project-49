@@ -5,18 +5,16 @@ DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 
 def get_question():
-    ran = random.randint(2, 1223)
-    question = ran
-    right_answer = is_prime(ran)
+    random_number = random.randint(3, 1223)
+    question = random_number
+    right_answer = 'yes' if is_prime(random_number) else 'no'
     return right_answer, question
 
 
-def is_prime(ran):
+def is_prime(number):
     i = 1
-    right_answer = 'yes'
-    while ran >= i:
-        if ran % i == 0 and ran != i and i != 1:
-            right_answer = 'no'
-            break
+    while i <= number:
+        if number % i == 0 and number != i and i != 1:
+            return False
         i += 1
-    return right_answer
+    return True
