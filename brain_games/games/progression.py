@@ -13,7 +13,7 @@ def get_question():
     right_answer = progression[hidden_position]
     progression[hidden_position] = '.. '
     question = " ".join(progression)
-    return right_answer, question
+    return right_answer, str(question)
 
 
 def get_progression(start, step, length):
